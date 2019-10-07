@@ -1,0 +1,74 @@
+
+//@import "typo";
+@import "footer";
+
+body {
+  font-family: "Open Sans", Arial, sans-serif;
+  font-size: 14px;
+}
+
+h2 {
+  font-family: 'Libre Baskerville', serif;
+  font-size: 64px;
+  color: #305fa4;
+}
+
+//HEADER
+.main-header {
+  width: 100%;
+  height: 84px;
+  line-height: 84px;
+  background: white;
+  position: absolute;
+  top: 30px;
+}
+
+.logo {
+  width: 283px;
+}
+
+.logo-atrapalo {
+  width: 41px;
+}
+
+.logo-costabrava {
+  width: 88px;
+}
+
+
+// HERO
+.hero {
+  background-color: #f8f4e9;
+
+  video {
+    width: 100%;
+  }
+}
+
+.hero-bottom {
+  background-color: #f8f4e9;
+  padding: 20px 0 22px;
+}
+
+
+//ARTIST LIST
+.artist-list {
+
+  img {
+    display: block;
+    margin: 30px auto 10px;
+  }
+
+  &--wawa {
+    background: #f39a8a;
+  }
+
+  &--tonto {
+    background: #f9eeb8;
+  }
+
+  &--camille {
+    background: #9dc8ec;
+  }
+
+}
