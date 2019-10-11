@@ -56,8 +56,13 @@ video {
 // HERO
 .hero {
   background-color: #f8f4e9;
-  height: 100vh;
+  height: 53vh;
   overflow: hidden;
+
+
+  @media (min-width: 992px) {
+    height: 100vh;
+  }
 
   .wawa & {
     background-color: #f39a8a;
@@ -295,11 +300,11 @@ video {
 
   &--wrapper {
     padding: 5%;
+    position: relative;
 
     @media (min-width: 992px) {
       width: 45%;
       margin-left: 55%;
-      position: relative;
     }
 
     .wawa & {
@@ -346,14 +351,18 @@ video {
   }
 
   &--credit {
-    position: absolute;
-    bottom: 0;
-    left: 0;
-    width: 100%;
-    padding-left: 12%;
     color: white;
     line-height: 2em;
-    margin-bottom: 3%;
+    margin: 3% 0;
+
+    @media (min-width: 992px) {
+      position: absolute;
+      bottom: 0;
+      left: 0;
+      width: 100%;
+      padding-left: 12%;
+      margin: 0 0 3%;
+    }
   }
 
   p {
