@@ -29,9 +29,14 @@ video {
   height: 84px;
   line-height: 84px;
   background: white;
-  position: absolute;
-  top: 30px;
-  z-index: 10;
+
+  @media (min-width: 992px) {
+    position: absolute;
+    top: 30px;
+    z-index: 10;
+    background: url(../images/header-bg.svg) center no-repeat;
+    background-size: cover;
+  }
 }
 
 .logo {
@@ -40,6 +45,7 @@ video {
 
 .logo-atrapalo {
   width: 41px;
+  margin-right: 15px;
 }
 
 .logo-costabrava {
@@ -144,29 +150,36 @@ video {
 
 // ARTIST PAGE
 .artist-wrapper {
-  background: center no-repeat;
-  background-size: cover;
   position: relative;
 
-  .wawa & {
-    background-image: url(../images/wawa-d-bg.png);
-  }
+  @media (min-width: 992px) {
+    background: center no-repeat;
+    background-size: cover;
 
-  .tonto & {
-    background-image: url(../images/tonto-d-bg.png);
-  }
+    .wawa & {
+      background-image: url(../images/wawa-d-bg.png);
+    }
 
-  .camille & {
-    background-image: url(../images/camille-d-bg.png);
+    .tonto & {
+      background-image: url(../images/tonto-d-bg.png);
+    }
+
+    .camille & {
+      background-image: url(../images/camille-d-bg.png);
+    }
   }
 }
 
 .artist-description {
-  width: 33.333%;
-  margin: 0 auto;
+  padding: 100px 15px 80px;
   line-height: 2.8em;
-  padding: 100px 0 80px 0;
-  position: relative;
+
+  @media (min-width: 992px) {
+    width: 33.333%;
+    padding: 100px 0 80px 0;
+    position: relative;
+    margin: 0 auto;
+  }
 
   &:before {
     content: "";
@@ -213,12 +226,16 @@ video {
 }
 
 .artist-download {
-  width: 100%;
-  max-width: 316px;
-  position: absolute;
-  top: 20%;
-  left: 50%;
-  margin-left: 20%;
+  margin-bottom: 50px;
+
+  @media (min-width: 992px) {
+    width: 100%;
+    max-width: 316px;
+    position: absolute;
+    top: 20%;
+    left: 50%;
+    margin-left: 20%;
+  }
 
   img {
     width: 100%;
@@ -235,13 +252,19 @@ video {
 }
 
 .button-download {
+  display: block;
+  width: 184px;
+  margin: 0 auto;
   border: 1px solid #b2b3b5;
   background-color: #f8f9fb;
   border-radius: 5px;
   padding: 17px 5px;
   color: black;
-  display: inline-block;
   clear: both;
+
+  @media (min-width: 992px) {
+    margin-left: 0;
+  }
 
   &:hover {
     background-color: white;
@@ -251,25 +274,33 @@ video {
 }
 
 .artist-region {
-  background: center left no-repeat;
-  background-size: 65% auto;
 
-  .wawa & {
-    background-image: url(../images/wawa-region.jpg);
-  }
+  @media (min-width: 992px) {
+    background: center left no-repeat;
+    background-size: 65% auto;
 
-  .tonto & {
-    background-image: url(../images/tonto-region.jpg);
-  }
+    .wawa & {
+      background-image: url(../images/wawa-region.jpg);
+    }
 
-  .camille & {
-    background-image: url(../images/camille-region.jpg);
+    .tonto & {
+      background-image: url(../images/tonto-region.jpg);
+    }
+
+    .camille & {
+      background-image: url(../images/camille-region.jpg);
+    }
+
   }
 
   &--wrapper {
-    width: 45%;
-    margin-left: 55%;
     padding: 5%;
+
+    @media (min-width: 992px) {
+      width: 45%;
+      margin-left: 55%;
+      position: relative;
+    }
 
     .wawa & {
       background-color: #a3cdcd;
@@ -312,6 +343,17 @@ video {
       margin-top: -7%;
       margin-left: -2%;
     }
+  }
+
+  &--credit {
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    padding-left: 12%;
+    color: white;
+    line-height: 2em;
+    margin-bottom: 3%;
   }
 
   p {
