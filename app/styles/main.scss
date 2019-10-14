@@ -37,6 +37,10 @@ video {
     background: url(../images/header-bg.svg) center no-repeat;
     background-size: cover;
   }
+
+  @media (min-width: 1440px) {
+    background-color: #fff;
+  }
 }
 
 .logo {
